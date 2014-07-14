@@ -1,19 +1,19 @@
 
-<%= form_for [:admin, @product], html: {multipart: true} do |f| %>
+<%= simple_form_for [:admin, @product], html: {multipart: true} do |f| %>
  
   <div class="group">
-    <%= f.label("標題") %>
-    <%= f.text_field :title %>
+    
+    <%= f.input :title %>
   </div>
   
   <div class="group">
-    <%= f.label("敘述") %>
-    <%= f.text_area :description %>
+
+    <%= f.input :description %>
   </div>
   
   <div class="group">
-    <%= f.label("數量") %>
-    <%= f.text_field :quantity %>
+    
+    <%= f.input :quantity %>
   </div>
     <div class="group">
     <%= f.fields_for :photos do |photo| %>
