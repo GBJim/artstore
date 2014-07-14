@@ -1,0 +1,28 @@
+<h1>Listing articles</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+    <th>Quantity</th>
+     <th>Image</th>
+  
+  </tr>
+ 
+  <% @products.each do |p| %>
+    <tr>
+      <td><%= p.title %></td>
+      <td><%= p.description %></td>
+       <td><%= p.quantity %></td>
+        <% p.photos.each do |x| %>
+         <td>
+
+
+          <%= image_tag x.image_url.to_s %>
+
+
+    </td>
+    <% end %>
+    </tr>
+  <% end %>
+</table>
