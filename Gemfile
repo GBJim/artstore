@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem  'settingslogic'
 gem 'stripe'
 
  gem "letter_opener"

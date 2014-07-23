@@ -21,9 +21,9 @@ config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings= {
     :port => 587,
     :address => 'smtp.mailgun.org',
-    :user_name => 'postmaster@sandboxc333916381654a67b6ed41cb2d1184c2.mailgun.org',
-    :password => '8m42lj8m46x4', 
-    :domain => 'sandboxc333916381654a67b6ed41cb2d1184c2.mailgun.org',
+    :user_name => Settings.mailGun.user_name,
+    :password => Settings.mailGun.password, 
+    :domain => Settings.mailGun.domain,
     :authentication => :plain,
   }
 
