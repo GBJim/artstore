@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+
+
   namespace :admin do 
     resources :products
     resources :orders do 
@@ -34,6 +36,7 @@ Rails.application.routes.draw do
   end
 
   resources :orders do 
+    resources :card_charges
     member do 
       get :pay_with_credit_card
     end
