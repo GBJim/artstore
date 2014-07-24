@@ -1,7 +1,9 @@
 class ProductsController < ApplicationController
 
   def index
+    @search  = Product.search(params[:q])
     @products = Product.order("id DESC")
+
   end
 
 

@@ -6,8 +6,8 @@ class OrdersController < ApplicationController
     @order = current_user.orders.build(order_params)
 
     if @order.save
-      x=OrderPlacingService.new(current_cart,order)
-
+      OrderPlacingService.new(current_cart,@order).place_order!
+      #Hello.new
       redirect_to order_path(@order.token)
     else
       render "carts/checkout"
